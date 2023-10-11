@@ -43,19 +43,19 @@ bash train_PCLMs.sh
 
 #### Parameter Configuration
 
---model_name_or_path: pretrained language model path, i.e., GPT2-medium or GPT2-large
+`--model_name_or_path`: pretrained language model path, i.e., GPT2-medium or GPT2-large
 
---prefix_len: the length of prefix
+`--prefix_len`: the length of prefix
 
---prefix_mid_size: the dimension of reparameterization in prefix-tuning
+`--prefix_mid_size`: the dimension of reparameterization in prefix-tuning
 
---output_dir: the save path for the output model
+`--output_dir`: the save path for the output model
 
 ## Generating controllable text using Air-Decoding
 
 It contains the generation process of Air-Decoding.
 
-#### Controllable Text Generation
+#### Generation Implementation
 
 ```shell
 cd ./scripts
@@ -66,10 +66,10 @@ bash generate_detoxification.sh
 
 #### Parameter Configuration
 
-- --model_name_or_path: fine-tuned PC-LMs model path
-- --length: the length of generated text
-- --samples: the number of generated texts for each prompt
-- --lambda_cs: control strength
+- `--model_name_or_path`: fine-tuned PC-LMs model path
+- `--length`: the length of generated text
+- `--samples`: the number of generated texts for each prompt
+- `--lambda_cs`: control strength
 
 ## Evaluation
 
@@ -88,5 +88,5 @@ bash eval_dist.sh
 
 #### Parameter Configuration
 
-- --model_name_or_path: fine-tuned classifier model for sentiment or topic evaluation and GPT2-large model for perplexity evaluation
-- --dataset_path: the path of the file under test, which is a JSONL file. Each data entry in the file includes a 'text' field and its corresponding attribute label
+- `--model_name_or_path`: fine-tuned classifier model for sentiment or topic evaluation and GPT2-large model for perplexity evaluation
+- `--dataset_path`: the path of the file under test, which is a JSONL file. Each data entry in the file includes a 'text' field and its corresponding attribute label
