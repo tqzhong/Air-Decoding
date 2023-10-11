@@ -1,20 +1,6 @@
 # Air-Decoding
 This repository contains code for paper Air-Decoding: Attribute Distribution Reconstruction for Decoding-Time Controllable Text Generation which has been accepted to appear at EMNLP 2023. If you have any questions, please feel free to create an issue or contact the email: ztq602656097@mail.ustc.edu.cn
 
-## Contents
-
-├── scripts
-├── test_data
-├── dataset
-│   ├── detoxification-jigsaw
-│   ├── sentiment-imdb
-│   └── topic-agnews
-├── models
-│   ├── best_sentiment_classifier
-│   ├── best_topic_classifier
-│   ├── ckpt_for_detoxification
-│   └── ckpt_for_sentiment_and_topic
-
 ## Description of Main files
 
 - `air-decoding.py`: Air-Decoding algorithm implementation for generating text with desired attributes
@@ -47,7 +33,7 @@ This repository contains code for paper Air-Decoding: Attribute Distribution Rec
 
 It contains the training process of PC-LMs.
 
-##### Training Implementation
+#### Training Implementation
 
 ```shell
 mkdir ckpt
@@ -55,7 +41,7 @@ cd ./scripts
 bash train_PCLMs.sh
 ```
 
-##### Parameter Configuration
+#### Parameter Configuration
 
 --model_name_or_path: pretrained language model path, i.e., GPT2-medium or GPT2-large
 
@@ -69,7 +55,7 @@ bash train_PCLMs.sh
 
 It contains the generation process of Air-Decoding.
 
-##### Controllable Text Generation
+#### Controllable Text Generation
 
 ```shell
 cd ./scripts
@@ -78,7 +64,7 @@ bash generate_topic.sh
 bash generate_detoxification.sh
 ```
 
-##### Parameter Configuration
+#### Parameter Configuration
 
 - --model_name_or_path: fine-tuned PC-LMs model path
 - --length: the length of generated text
@@ -89,7 +75,7 @@ bash generate_detoxification.sh
 
 It contains the evaluation process.
 
-##### Evaluation Implementation
+#### Evaluation Implementation
 
 ```shell
 cd ./scripts
@@ -100,7 +86,7 @@ bash eval_perplexity.sh
 bash eval_dist.sh
 ```
 
-##### Parameter Configuration
+#### Parameter Configuration
 
 - --model_name_or_path: fine-tuned classifier model for sentiment or topic evaluation and GPT2-large model for perplexity evaluation
 - --dataset_path: the path of the file under test, which is a JSONL file. Each data entry in the file includes a 'text' field and its corresponding attribute label
