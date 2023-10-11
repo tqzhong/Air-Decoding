@@ -1,6 +1,22 @@
 # Air-Decoding
 This repository contains code for paper Air-Decoding: Attribute Distribution Reconstruction for Decoding-Time Controllable Text Generation which has been accepted to appear at EMNLP 2023. If you have any questions, please feel free to create an issue or contact the email: ztq602656097@mail.ustc.edu.cn
 
+## Contents
+
+```
+├── dataset
+│   ├── detoxification-jigsaw
+│   ├── sentiment-imdb
+│   └── topic-agnews
+├── models
+│   ├── best_sentiment_classifier
+│   ├── best_topic_classifier
+│   ├── ckpt_for_detoxification
+│   └── ckpt_for_sentiment_and_topic
+├── scripts
+├── test_data
+```
+
 ## Description of Main files
 
 - `air-decoding.py`: Air-Decoding algorithm implementation for generating text with desired attributes
