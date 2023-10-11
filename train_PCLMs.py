@@ -1,4 +1,4 @@
-from this import d
+
 import torch
 from modeling_gpt2 import GPT2LMHeadModel
 from transformers import GPT2Tokenizer, GPT2Config
@@ -69,7 +69,7 @@ def set_seed(args):
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed(args.seed)
 
-def main(args):
+def train(args):
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
@@ -195,4 +195,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     args.device = torch.device("cuda:{}".format(args.device_num))
     
-    main(args)
+    train(args)
