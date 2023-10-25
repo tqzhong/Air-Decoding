@@ -1,5 +1,5 @@
 # Air-Decoding
-This repository contains code for paper Air-Decoding: Attribute Distribution Reconstruction for Decoding-Time Controllable Text Generation which has been accepted to appear at EMNLP 2023. If you have any questions, please feel free to create an issue or contact the email: ztq602656097@mail.ustc.edu.cn
+This repository contains code for paper [Air-Decoding: Attribute Distribution Reconstruction for Decoding-Time Controllable Text Generation](https://arxiv.org/pdf/2310.14892.pdf) which has been accepted to appear at EMNLP 2023. If you have any questions, please feel free to create an issue or contact the email: ztq602656097@mail.ustc.edu.cn
 
 ## Contents
 
