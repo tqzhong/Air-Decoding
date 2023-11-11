@@ -115,7 +115,7 @@ def train(args):
         tr_loss, logging_loss = 0.0, 0.0
         model.train()
         model.zero_grad()
-        loss_fct = CrossEntropyLoss()
+        loss_fct = CrossEntropyLoss(ignore_index=50256)
         args.loss_fct = loss_fct
         logger.info('start_training')
 
