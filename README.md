@@ -106,3 +106,26 @@ bash eval_dist.sh
 
 - `--model_name_or_path`: fine-tuned classifier model for sentiment or topic evaluation and GPT2-large model for perplexity evaluation
 - `--dataset_path`: the path of the file under test, which is a JSONL file. Each data entry in the file includes a 'text' field and its corresponding attribute label
+
+#### Citation
+```shell
+@inproceedings{zhong-etal-2023-air,
+    title = "Air-Decoding: Attribute Distribution Reconstruction for Decoding-Time Controllable Text Generation",
+    author = "Zhong, Tianqi  and
+      Wang, Quan  and
+      Han, Jingxuan  and
+      Zhang, Yongdong  and
+      Mao, Zhendong",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
+    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.512",
+    pages = "8233--8248",
+    abstract = "Controllable text generation (CTG) aims to generate text with desired attributes, and decoding-time-based methods have shown promising performance on this task. However, in this paper, we identify the phenomenon of Attribute Collapse for the first time. It causes the fluency of generated text to rapidly decrease when the control strength exceeds a critical value, rendering the text completely unusable. This limitation hinders the effectiveness of decoding methods in achieving high levels of controllability. To address this problem, we propose a novel lightweight decoding framework named Air-Decoding. Its main idea is reconstructing the attribute distributions to balance the weights between attribute words and non-attribute words to generate more fluent text. Specifically, we train prefixes by prefix-tuning to obtain attribute distributions. Then we design a novel attribute distribution reconstruction method to balance the obtained distributions and use the reconstructed distributions to guide language models for generation, effectively avoiding the issue of Attribute Collapse. Experiments on multiple CTG tasks prove that our method achieves a new state-of-the-art control performance.",
+}
+```
